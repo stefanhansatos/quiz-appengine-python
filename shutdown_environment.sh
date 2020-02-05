@@ -15,8 +15,5 @@ echo "Deleting quiz-account Service Account"
 gcloud -q iam service-accounts delete quiz-account@$GCLOUD_PROJECT.iam.gserviceaccount.com
 rm $GOOGLE_APPLICATION_CREDENTIALS
 
-echo "Deleting Datastore/App Engine instance"
-gcloud app create --region "europe-west"
-
 echo "Deleting bucket: gs://$GCLOUD_BUCKET"
 gsutil rm -r gs://$GCLOUD_BUCKET
